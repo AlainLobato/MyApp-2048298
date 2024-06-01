@@ -1,0 +1,18 @@
+<app-header title="API Products"></app-header>
+
+<ion-content>
+  <ion-card *ngFor="let producto of productos">
+    <ion-card-title>{{producto.title}}</ion-card-title>
+    <ion-card-content>
+      <ion-item [routerLink]="['/productoDetalle', producto.id]">
+        <ion-icon name="information-circle-outline"></ion-icon>
+        <ion-label>Detalles</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <div></div>
+
+</ion-content>
+
+<app-footer></app-footer>

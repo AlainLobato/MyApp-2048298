@@ -1,0 +1,24 @@
+<app-header title="Lista Alumnos"></app-header>
+
+  <form #templateForm="ngForm" (ngSubmit)="agregaAlumno()">
+    <ion-input label="Alumno" labelPlacement="floating" placeholder="Nombre del alumno" required
+      [(ngModel)]="alumno.nombre" name="nombre"></ion-input>
+    <div>
+      <ion-button class="btn" type="submit" [disabled]="templateForm.invalid">Agregar Alumno</ion-button>
+    </div>
+  </form>
+
+  <div *ngFor="let alumno of alumnos">
+    <ion-list>
+      <ion-item-sliding>
+        <ion-item color="light">{{alumno.nombre}}</ion-item>
+        <ion-item-options side="end">
+          <ion-item-option  color="danger" (click)="eliminarAlumno(alumno)">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+
+<app-footer></app-footer>

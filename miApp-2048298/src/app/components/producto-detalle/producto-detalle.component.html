@@ -1,0 +1,13 @@
+<app-header backButton="/productos" title = "Producto {{producto.id}}" ></app-header>
+<ion-card>
+  <ion-card-title>{{producto.title}}</ion-card-title>
+  <ion-card-content>
+    <img [src]="producto.image" width="200"/>
+    <h2>Precio: ${{producto.price}}</h2>
+    <h2>Descripcion: {{producto.description}}</h2>
+  </ion-card-content>
+</ion-card>
+
+<div class="line"></div>
+
+<app-footer></app-footer>

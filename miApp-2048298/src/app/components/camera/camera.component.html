@@ -1,0 +1,15 @@
+<app-header title="Camera"></app-header>
+<ion-button (click)="optionsToSelectImage()" mode = "ios" class="btn" shape="round">
+  <ion-icon slot="start" name="camera-outline"></ion-icon>
+  Take Photo
+</ion-button>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size="3" *ngFor="let foto of fotos; index as i">
+      <img [src]="foto.webViewPath" alt="">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<app-footer></app-footer>
